@@ -1,0 +1,997 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+    overflow-y: scroll; /* Mantieni lo scorrimento */
+    background: linear-gradient(135deg, #29435b, #004ba0);
+    color: #fff;
+}
+
+body::-webkit-scrollbar {
+    width: 0; /* Nasconde la barra di scorrimento */
+}
+
+/* Hero Section */
+.hero-header {
+    width: 100%;
+    min-height: 40vh;
+    background: inherit;
+    color: inherit;
+}
+
+.wrapper {  
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0); /* Inizialmente trasparente */
+    color: #fff;
+    z-index: 1000; /* Assicurati che l'header sia sopra il resto */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transizione fluida */
+}
+
+.navbar-container {
+    width: 100%;
+}
+
+/* Quando si fa lo scroll, cambia il colore e aggiungi un'ombra */
+header.scrolled ,
+.menu-links.scrolled {
+    background-color: rgba(0, 72, 160, 0.8); /* Colore blu con trasparenza */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Aggiungi ombra durante lo scroll */
+}
+header.dark-scrolled,
+ .menu-links.dark-scrolled {
+    background: linear-gradient(135deg, rgba(78, 78, 78, 0.7), rgba(42, 42, 42, 0.7)); /* Gradiente con trasparenza */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombra più forte con trasparenza */
+}
+
+/* Logo */
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo i {
+    height: 45px;
+    width: 45px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #007ced;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+header .logo .logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: inherit;
+}
+span {
+    font-size: 1.5rem; /* Aumenta la dimensione del carattere */
+    font-weight: bold; /* Rende il testo più evidente */
+    color: #ffdd57; /* Colore che lo fa risaltare, puoi scegliere un altro colore se preferisci */
+}
+
+
+/* Navbar */
+nav {
+    position: relative;
+}
+
+nav .bottone {
+    display: none;
+}
+
+nav .navlinks {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+nav .navlinks li {
+    margin-right: 2rem;
+}
+
+nav .navlinks li a {
+    color: inherit;
+    margin-right: 2rem;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+nav .navlinks li a:hover {
+    color: #ffdd57;
+}
+
+.menu-toggle {
+    display: none;  /* Di default, non visibile */
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Stile del pulsante modalità notturna */
+.dark-mode-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+
+}
+.dark-mode .dark-mode-btn {
+    color: #fdd835; /* Colore giallo per il sole */
+}
+
+.dark-mode-btn i:hover {
+    color: whitesmoke;
+}
+
+.dark-mode .fa-times{
+    color:white;
+}
+.dark-mode .fa-times:hover{
+    color:#ffdd57;
+}
+
+i.fa-solid.fa-sun:hover {
+    color: whitesmoke;
+}
+
+/* Modalità notturna */
+body.dark-mode {
+    background: linear-gradient(135deg, #121212, #1c1c1c); /* Sfondo scuro */
+    color: #e0e0e0; /* Testo chiaro */
+}
+
+/* Colore dei link in modalità scura */
+body.dark-mode header a{
+    color: #bb86fc;
+}
+
+/* Colore dei link in modalità scura su scroll */
+header.dark-scrolled a {
+    color: #ffa726;
+}
+
+
+/* Footer scuro per la modalità notturna */
+body.dark-mode footer {
+    background: linear-gradient(135deg, #4e4e4e, #2a2a2a);
+    color: #e0e0e0;
+}
+
+
+h2{
+    text-align: center;
+    font-size: xx-large;
+    /* margin-top: 30px; */
+}
+
+
+/* Hero Content */
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    padding-top: 4rem;
+    width: 90%;
+    margin: 5rem auto;
+    flex-wrap: wrap;
+}
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+
+/* Colonna Sinistra */
+.about-left {
+    /* flex: auto; */
+    max-width: 50%;
+    text-align: left;
+    font-size: 1rem;
+    color: #fff; /* Testo leggibile */
+}
+
+.about-left h2 {
+    font-size: 2rem; /* Titolo principale */
+    margin-bottom: 10px;
+    color: #ffdd57; /* Enfasi sul titolo */
+}
+
+.about-left p {
+    font-size: 0.9rem; /* Testo più piccolo */
+    color: #ddd; /* Contrasto leggibile */
+    text-align: center;
+
+}
+
+/* Colonna Destra */
+.about-right {
+    max-width: 50%;
+    flex: 2;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* Stile del contenitore dell'immagine */
+.profile-image-container {
+    max-width: 400px; /* Dimensione iniziale dell'immagine */
+    /* height: 150px; */
+    overflow: hidden; /* Nasconde eventuali parti dell'immagine che escono dal contenitore */
+    border-radius: 50%; /* Rende l'immagine circolare */
+    margin-top: 20px; /* Spazio tra l'immagine e il testo */
+    transition: transform 0.3s ease-in-out; /* Anima il ridimensionamento */
+}
+
+/* Stile dell'immagine */
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* Assicura che l'immagine si adatti al contenitore senza distorsioni */
+    transition: transform 0.3s ease-in-out; /* Anima lo zoom sull'hover */
+}
+
+/* Effetto hover sull'immagine */
+.profile-image-container:hover .profile-image {
+    transform: scale(1.2); /* Zoom dell'immagine */
+}
+
+
+.section-header {
+    margin: 15px auto;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffdd57;
+}
+
+.section-header p {
+    font-size: 0.9rem;
+    color: #ddd;
+    text-align: center;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.project-image {
+    flex: 1;
+    max-width: 45%;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Aggiungi un bordo arrotondato se vuoi */
+}
+
+.project-description {
+    max-width: 50%;
+    flex: 2;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #333;
+    text-align: left;
+}
+
+
+.project-description h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative; /* Necessario per il posizionamento dell'elemento ::before */
+    padding-left: 30px; /* Aggiungi spazio a sinistra per evitare la sovrapposizione */
+}
+
+.project-description h3::before {
+    content: "—";
+    position: absolute;
+    left: 0; /* Posiziona il trattino all'inizio */
+    top: 50%; /* Posiziona il trattino verticalmente al centro del testo */
+    transform: translateY(-50%); /* Centra il trattino rispetto al testo */
+    font-size: 1.2rem;
+    color: var(--main-color, #000); /* Colore del trattino (nero di default) */
+}
+
+
+
+/* Timeline */
+.timeline ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.timeline li {
+    color: var(--text-color);
+    position: relative;
+    padding-left: 40px; /* Per spazio a sinistra */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.timeline li::before {
+    content: "—"; /* Trattino accanto */
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    color: var(--main-color); /* Colore primario del tema */
+}
+
+.timeline h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.timeline p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+/* Competenze Tecniche */
+.competenze {
+    background-color: rgba(255, 255, 255, 0.9); /* Sfondo bianco con trasparenza */
+    border-radius: 10px;
+    padding: 30px 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: var(--text-color); /* Usa il colore principale del testo */
+}
+
+.competenze p {
+    font-size: 1.2rem; /* Testo leggermente più grande */
+    line-height: 1.8; /* Migliora la leggibilità */
+    color: var(--main-color); /* Colore primario del tema */
+}
+
+
+.container .hero-pic {
+    max-width: 300px;
+    /* height: 300px; */
+    /* border-radius: 50%; */
+    overflow: hidden;
+    border: 15px solid #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero-pic img {
+    height: 100%;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero-pic:hover {
+    transform: scale(1.1);
+}
+
+.hero-pic img:hover {
+    transform: scale(1.2);
+}
+
+.hero-text {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-text h5 {
+    font-size: 1.2rem;
+    color: #ffdd57;
+    margin-bottom: 10px;
+}
+
+.hero-text h5 span {
+    color: inherit;
+    font-weight: bold;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1rem;
+}
+
+strong {
+    font-size: 3.2rem; /* Dimensione iniziale del testo */
+    font-weight: bold; /* Mantiene il grassetto */
+    transition: transform 0.5s ease, color 0.3s ease; /* Transizione fluida */
+}
+
+strong:hover {
+    /* transform: scale(1.3);
+    color: #ffda44;  */
+    transform: translateX(10px); /* Sposta il testo verso destra */
+    color: #ffda44; /* Cambia il colore al passaggio del mouse */
+}
+
+
+.prova {
+    margin: 20px auto;
+    padding-top: 35px;
+}
+
+.prova .btn {
+    padding: 12px 24px;
+    margin-right: 10px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    color: inherit;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.prova .btn.active {
+    background-color: #ffdd57;
+    color: #333;
+    border-color: #ffdd57;
+}
+
+.prova .btn:hover {
+    background-color: #fff;
+    color: #007ced;
+    transform: scale(1.1);
+}
+
+.hero-text .social a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: inherit;
+    transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.hero-text .social a:hover {
+    transform: scale(1.2);
+    color: #ffdd57;
+}
+/* Stile per l'iframe della mappa */
+#map {
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    border: 0; /* Rimuove il bordo */
+    border-radius: 8px; /* Aggiunge angoli arrotondati */
+}
+
+
+/* Sections */
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem; /* Più grande per maggiore enfasi */
+    color: var(--main-color);
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007BFF;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #126ccc;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+.dark-mode .form-group button {
+    background-color: #343a40; /* Grigio scuro per modalità notte */
+    color: #fff; /* Testo bianco */
+}
+
+/* Effetto hover in modalità dark */
+.dark-mode .form-group button:hover {
+    background-color: #73818f; /* Grigio medio al passaggio del mouse */
+}
+
+.form-group button:active {
+    background-color: #004085;
+}
+
+
+
+
+/* Footer */
+.container-footer{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+
+footer {
+    background: linear-gradient(135deg, #29435b, #004ba0);
+    color: #fff;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+footer .social a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+footer .social a:hover {
+    transform: scale(1.2);
+    color: #ffdd57;
+}
+
+
+
+/* Responsive */
+
+@media screen and (min-width: 1024px) {
+    .menu-links{
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 930px) {
+    /* Navbar */
+    nav .bottone {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav .bottone span {
+        display: block;
+        background-color: #007ced;
+        margin: 5px 0;
+        width: 100%;
+        height: 3px;
+        transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .click span:first-child {
+        transform: rotate(-40deg);
+    }
+
+    .click span:nth-child(2) {
+        opacity: 0;
+        margin: 0;
+    }
+
+    .click span:last-child {
+        transform: rotate(40deg);
+    }
+
+    nav .navlinks {
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        width: 60%;
+        height: calc(100vh - 70px);
+        background-color: inherit;
+        box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    nav .navlinks.open {
+        right: 0;
+    }
+
+    nav .navlinks li {
+        margin-bottom: 15px;
+    }
+
+    /* Layout */
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-left,
+    .about-right {
+        max-width: 100%;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .hero-pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-image {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .project-description {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .footer {
+        padding: 20px 0;
+        gap: 10px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+    footer .social a {
+        font-size: 1.3rem;
+    }
+
+    /* Mappa */
+    #map {
+        height: 250px;
+    }
+}
+@media screen and (max-width: 768px) {
+    strong {
+        font-size: 2.2rem;
+    }    
+
+
+    .none{
+        display: none;
+    }
+    
+    .name {
+        position: relative;
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 0 10px; /* Distanza tra il testo e le linee */
+        color: white;
+    }
+    
+    /* Nascondi i link della navbar di default */
+    nav .navlinks {
+        display: none; /* Nasconde i link di navigazione inizialmente */
+        flex-direction: column; /* Dispone i link in colonna */
+        position: absolute;
+        top: 100%; /* Mostra il menu sotto l'header */
+        left: 0;
+        width: 100%; /* Il menu occupa tutta la larghezza */
+        background-color: #0056b3; /* Colore di sfondo */
+        z-index: 1000;
+    }
+    
+    .menu-links{
+        display: none;
+        flex-direction: column;
+        position: fixed; /* Fissa il menu durante lo scroll */
+        top: 0; /* Allinealo alla parte superiore dello schermo */
+        left: 0;
+        width: 100%; /* Occupa tutta la larghezza */
+        background-color: #0056b3;  /*Colore di sfondo */
+        z-index: 1000; /* Porta il menu sopra gli altri elementi */
+        padding: 20px; /* Aggiungi un po' di padding */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Aggiungi un'ombra */
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .menu-links a{
+        color: white;
+    }
+
+    .menu-links.dark-scrolled a:not(:last-of-type){
+        color:#bb86fc ;
+    }
+
+    .menu-links a:hover,
+    .menu-links.dark-scrolled a:hover{
+        color: #ffdd57;
+    }
+    
+    /* Mostra il menu quando attivo */
+    .menu-links.active {
+        display: flex;
+        flex-direction: column;
+        z-index: 1001;
+        padding-top: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+            
+    }
+
+    /* Stile per i link nel menu */
+    nav .navlinks li {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    nav .navlinks a {
+        text-align: center;
+        width: 100%;
+        font-size: 18px;
+    }
+
+   
+
+    /* Stile per il bottone del menu */
+    .menu-toggle {
+        margin-right: 10px;
+        display: block; /* Mostra il bottone per il menu */
+        background-color: #f8f9fa;
+        color: #000;
+        font-size: 20px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dark-mode .menu-toggle {
+        background-color: #343a40; /* Colore scuro per modalità notte */
+        color: #fff; /* Testo bianco */
+    }
+    
+    .menu-toggle:hover {
+        background-color: #e2e6ea; /* Colore più scuro in modalità normale */
+    }
+    
+    .dark-mode .menu-toggle:hover {
+        background-color: #495057; /* Colore più chiaro in modalità notte */
+    }
+
+    .close-container {
+        display: flex;
+        justify-content: flex-end; /* Allinea la X a destra */
+        padding: 10px; /* Spaziatura attorno alla X */
+    }
+    
+    /* Stile per la "X" */
+    .chiudi {
+        cursor: pointer;
+        font-size: 20px;
+        background: transparent;
+        border: none;
+        transition: color 0.3s ease;
+    }
+    
+    .chiudi:hover {
+        color: white; /* Cambia colore al passaggio del mouse */
+    }
+    /* Nasconde l'header su scorrimento */
+    header {
+        padding: 10px 20px;
+    }
+    /* Hero section */
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    /* Colonne nella sezione "about" */
+    .about-left,
+    .about-right {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Progetti */
+    .project-container {
+        flex-direction: column;
+    }
+
+    .project-image,
+    .project-description {
+        max-width: 100%;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+
+    /* Mappa */
+    #map {
+        height: 200px;
+    }
+    /* Hero Pic */
+    .hero-pic {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .container{
+        padding-block: 1rem;
+    }
+
+    .profile-image-container {
+        max-width: 300px;
+    }
+
+    .social a {
+        font-size: 1.2rem;
+    }
+
+    footer .social a {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    /* Modifiche per schermi molto piccoli */
+    header {
+        padding: 15px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 0.8rem;
+    }
+
+   
+
+    .project-image {
+        max-width: 100%;
+    }
+
+    .project-description {
+        max-width: 100%;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    .footer {
+        padding: 15px 0;
+    }
+
+    footer .social a {
+        font-size: 1.1rem;
+    }
+
+    /* Mappa */
+    #map {
+        height: 180px;
+    }
+}
+
+

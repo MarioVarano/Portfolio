@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Mario Varano</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="hero-header">
+        <!-- <div class="wrapper"> -->
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-m"></i>
+                    <div class="logo-text">Mario Varano</div>
+                </div>
+                <nav>
+                    <button class="menu-toggle">☰</button> <!-- Bottone menu per dispositivi mobili -->
+                    <ul class="navlinks">
+                        <li><a href="#profilo">Profilo</a></li>
+                        <li><a href="#progetti">Progetti</a></li>
+                        <li><a href="#formazione">Formazione</a></li>
+                        <li><a href="#contatti">Contatti</a></li>
+                        <li class="dark-mode-toggle dark-mode-btn">
+                            <i class="fa-solid fa-moon"></i>
+                        </li>
+                    </ul>
+                </nav>
+                
+            </header>
+            <div class="menu-links">
+                <div class="close-container">
+                    <button class="chiudi">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                </div>
+                <span class="name">Mario Varano</span>
+                <a href="#profilo">Profilo</a>
+                <a href="#progetti">Progetti</a>
+                <a href="#formazione">Formazione</a>
+                <a href="#contatti">Contatti</a>
+                <a class="dark-mode-toggle dark-mode-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </a>
+            </div>
+            <div class="container" id="profilo">
+                <div class="hero-pic">
+                    <img src="./Img/Mario cv.jpeg" alt="immagine di profilo">
+                </div>
+                <div class="hero-text">
+                    <p>Ciao, sono <strong> Mario Varano </strong></p>
+                    <p>un <span>Full-Stack Developer</span> con una formazione solida in HTML, CSS, JavaScript, Angular, Java e Spring Boot. Sono appassionato di tecnologia e continuo a cercare nuove opportunità per migliorarmi e affrontare sfide. Il mio obiettivo è crescere professionalmente e contribuire a progetti innovativi in un ambiente dinamico.</p>
+                    <div class="prova">
+                        <a href="./cv/CV MARIO VARANO.pdf" class="btn active" download="Mario_Varano_CV.pdf">Scarica CV</a>
+                        <a href="#contatti" class="btn">Contattami</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        
+        <!-- Formazione Section -->
+        <section id="formazione" class="container">
+            <div class="about-container">
+                <!-- Colonna di sinistra -->
+                <div class="about-left">
+                    <h2>About me</h2>
+                    <p>Formazione e competenze tecniche</p>
+                    <div class="profile-image-container">
+                        <img src="./Img/Mario cv.jpeg" alt="Mario Varano" class="profile-image">
+                    </div>
+                </div>
+        
+                <!-- Colonna di destra -->
+                <div class="about-right">
+                    <div class="timeline">
+                        <ul>
+                            <li>
+                                <h3>Bootcamp Fullstack Developer</h3>
+                                <p>(Gennaio 2024 - Luglio 2024)</p>
+                                <p>Epicode - Bootcamp intensivo di sei mesi focalizzato sullo sviluppo Fullstack. 
+                                    Per il frontend sono state utilizzate tecnologie come HTML, CSS, JavaScript e Angular, mentre per il backend Java e Spring Boot. 
+                                    Per la gestione dei dati è stato utilizzato PostgreSQL come database. 
+                                    Il corso si conclude con un progetto finale individuale che richiede l'applicazione di tutte le tecnologie trattate.
+                                </p>
+                            </li>
+                            <li>
+                                <h3>Java Academy ITConsulting</h3>
+                                <p>(Settembre 2024 - Ottobre 2024)</p>
+                                <p>Corso intensivo di 240 ore in cui ho acquisito una solida comprensione delle basi di Java, JavaEE, JDBC e MySQL.</p>
+                            </li>
+                            <li>
+                                <h3>NGW+ Academy</h3>
+                                <p>(Novembre 2024 - Dicembre 2024)</p>
+                                <p>Corso intensivo in cui ho approfondito l'utilizzo di Angular, Python, Selenium, FastAPI e Docker, sviluppando competenze sia in frontend che in backend.</p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+        
+                    <h3>Competenze Tecniche</h3>
+                    <p class="skills">
+                        HTML, CSS, JavaScript, Angular, Java, Spring Boot,Python, Selenium, FastAPI e Docker, PostgreSQL, MySQL.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="progetti" class="container">
+            <div class="about-container">
+                <div class="section-header">
+                    <h2>Progetti</h2>
+                    <p>Una raccolta di progetti che rappresentano le mie competenze e il mio impegno nel mondo dello sviluppo.</p>
+                </div>
+        
+                <div class="project-container">
+                    <div class="project-image">
+                        <img src="./Img/profile.png" alt="Screenshot del progetto EpicHealth">
+                    </div>
+                    
+                    <div class="project-description">
+                        <h2>EpicHealth</h2>
+                        <p>EpicHealth è un'applicazione web che permette agli utenti registrati di prenotare appuntamenti con professionisti della sanità tramite email. 
+                        Il sito offre una piattaforma intuitiva per la gestione delle prenotazioni, consentendo agli utenti di scegliere la data e l'orario più comodi per loro. 
+                        Gli utenti ricevono una conferma via email per ogni prenotazione effettuata. 
+                        Il sistema è stato sviluppato utilizzando Angular, Java, Spring Boot, e PostgreSQL, con funzionalità di gestione utenti e autenticazione per garantire la sicurezza e la privacy dei dati sensibili.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+
+        <!-- Contatti Section -->
+        <section id="contatti" class="container">
+            <div class="about-container">
+                <!-- Titolo e Paragrafo centrati in alto -->
+                <div class="section-header">
+                    <h2>Contatti</h2>
+                    <p>Se sei interessato a collaborare con me, non esitare a contattarmi! 
+                        <br>
+                        Puoi utilizzare i seguenti canali oppure compilare il modulo di contatto per inviarmi direttamente un'email.
+                        <br> 
+                        Sarò felice di rispondere al più presto!
+                    </p>
+                    <iframe 
+                        id="map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.338961128509!2d12.501237374435633!3d41.6655678792398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13258a6fb957f6c9%3A0x8d4e8b4bf73591cd!2sVia%20Silvio%20Pellico%2C%20Pomezia%20RM%2C%20Italia!5e0!3m2!1sit!2sit!4v1694869634132!5m2!1sit!2sit" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                    <!-- Modulo di contatto a destra -->
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nome</label>
+                                <input type="text" id="name" name="name" placeholder="Il tuo nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="La tua email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Oggetto</label>
+                                <input type="text" id="subject" name="subject" placeholder="Oggetto del messaggio" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Messaggio</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Scrivi il tuo messaggio..." required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit">Invia Messaggio</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+        </section>
+        
+    </main>
+
+    <footer>
+        <!-- sistemare spazi footer -->
+        <div class="social">
+            <a href="https://www.linkedin.com/in/mario-varano-7322422b0/" class="fa-brands fa-linkedin"></a>
+            <a href="mailto:mariovarano1995@gmail.com" class="fas fa-envelope"></a>
+            <a href="https://github.com/MarioVarano" class="fab fa-github"></a>
+        </div>
+        <div class="container-footer">
+            <p>&copy; 2024 Mario Varano. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
