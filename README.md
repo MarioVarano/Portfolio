@@ -30,24 +30,22 @@ Una piattaforma personale che mostra le mie competenze, i corsi che ho seguito e
 ## 📚 **Formazione**
 
 - **Bootcamp Full Stack Developer - Epicode (2024)**  
-  Tecnologie principali: HTML, CSS, JavaScript, Angular, Java, Spring Boot, PostgreSQL
+  Tecnologie principali: HTML, CSS, JavaScript,TypeScript Angular, Java, Spring Boot, PostgreSQL
 
 - **Corso Java Academy**  
   Tecnologie principali: Java, Java EE, Servlet, Tomcat, MySQL
 
 - **Corsi NGW+**  
-  Tecnologie principali: Python, Selenium, FastAPI, Docker
+  Tecnologie principali: HTML, CSS, JavaScript,TypeScript, Angular, Python, Selenium, FastAPI, Docker
 
 ---
 
 ## 🛠️ **Tecnologie e Strumenti**
 
-- **Frontend**: HTML, CSS, JavaScript, Angular
-- **Backend**: Java, Spring Boot, FastAPI
-- **Database**: PostgreSQL, MySQL
-- **Strumenti**: Git, GitHub, Postman, Trello
+- **Frontend**: HTML, CSS, JavaScript
+- **Librerie**: EmailJS
+- **Strumenti**: Git, GitHub
 
----
 
 ## 🌙 **Modalità Scura**
 
