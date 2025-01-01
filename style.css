@@ -26,9 +26,7 @@ body::-webkit-scrollbar {
     color: inherit;
 }
 
-.wrapper {  
-    margin: 0 auto;
-}
+
 
 header {
     position: fixed;
@@ -38,10 +36,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0); /* Inizialmente trasparente */
+    background-color: rgba(0, 0, 0, 0); 
     color: #fff;
-    z-index: 1000; /* Assicurati che l'header sia sopra il resto */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transizione fluida */
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar-container {
@@ -85,9 +83,9 @@ header .logo .logo-text {
     color: inherit;
 }
 span {
-    font-size: 1.5rem; /* Aumenta la dimensione del carattere */
-    font-weight: bold; /* Rende il testo più evidente */
-    color: #ffdd57; /* Colore che lo fa risaltare, puoi scegliere un altro colore se preferisci */
+    font-size: 1.5rem; 
+    font-weight: bold;
+    color: #ffdd57; 
 }
 
 
@@ -142,7 +140,7 @@ nav .navlinks li a:hover {
 
 }
 .dark-mode .dark-mode-btn {
-    color: #fdd835; /* Colore giallo per il sole */
+    color: #fdd835; 
 }
 
 .dark-mode-btn i:hover {
@@ -162,8 +160,8 @@ i.fa-solid.fa-sun:hover {
 
 /* Modalità notturna */
 body.dark-mode {
-    background: linear-gradient(135deg, #121212, #1c1c1c); /* Sfondo scuro */
-    color: #e0e0e0; /* Testo chiaro */
+    background: linear-gradient(135deg, #121212, #1c1c1c); 
+    color: #e0e0e0;
 }
 
 /* Colore dei link in modalità scura */
@@ -187,7 +185,6 @@ body.dark-mode footer {
 h2{
     text-align: center;
     font-size: xx-large;
-    /* margin-top: 30px; */
 }
 
 
@@ -195,7 +192,6 @@ h2{
 .container {
     display: flex;
     justify-content: space-evenly;
-    /* align-items: center; */
     padding-top: 4rem;
     width: 90%;
     margin: 5rem auto;
@@ -212,11 +208,10 @@ h2{
 
 /* Colonna Sinistra */
 .about-left {
-    /* flex: auto; */
     max-width: 50%;
     text-align: left;
     font-size: 1rem;
-    color: #fff; /* Testo leggibile */
+    color: #fff;
 }
 
 .about-left h2 {
@@ -226,7 +221,6 @@ h2{
 }
 
 .about-left p {
-    font-size: 0.9rem; /* Testo più piccolo */
     color: #ddd; /* Contrasto leggibile */
     text-align: center;
 
@@ -253,8 +247,8 @@ h2{
 }
 /* Stile del contenitore dell'immagine */
 .profile-image-container {
-    max-width: 400px; /* Dimensione iniziale dell'immagine */
-    /* height: 150px; */
+    max-width: 400px; 
+    max-height: 450px;
     overflow: hidden; /* Nasconde eventuali parti dell'immagine che escono dal contenitore */
     border-radius: 50%; /* Rende l'immagine circolare */
     margin-top: 20px; /* Spazio tra l'immagine e il testo */
@@ -265,13 +259,13 @@ h2{
 .profile-image {
     width: 100%;
     height: 100%;
-    object-fit: fill; /* Assicura che l'immagine si adatti al contenitore senza distorsioni */
-    transition: transform 0.3s ease-in-out; /* Anima lo zoom sull'hover */
+    object-fit: fill; 
+    transition: transform 0.3s ease-in-out; 
 }
 
 /* Effetto hover sull'immagine */
 .profile-image-container:hover .profile-image {
-    transform: scale(1.2); /* Zoom dell'immagine */
+    transform: scale(1.2); 
 }
 
 
@@ -286,7 +280,6 @@ h2{
 }
 
 .section-header p {
-    font-size: 0.9rem;
     color: #ddd;
     text-align: center;
 }
@@ -306,7 +299,7 @@ h2{
 .project-image img {
     width: 100%;
     height: auto;
-    border-radius: 8px; /* Aggiungi un bordo arrotondato se vuoi */
+    border-radius: 8px; 
 }
 
 .project-description {
@@ -385,16 +378,14 @@ h2{
 }
 
 .competenze p {
-    font-size: 1.2rem; /* Testo leggermente più grande */
+    font-size: 1.2rem; 
     line-height: 1.8; /* Migliora la leggibilità */
-    color: var(--main-color); /* Colore primario del tema */
+    color: var(--main-color); 
 }
 
 
 .container .hero-pic {
     max-width: 300px;
-    /* height: 300px; */
-    /* border-radius: 50%; */
     overflow: hidden;
     border: 15px solid #fff;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -444,13 +435,11 @@ h2{
 
 strong {
     font-size: 3.2rem; /* Dimensione iniziale del testo */
-    font-weight: bold; /* Mantiene il grassetto */
+    font-weight: bold; 
     transition: transform 0.5s ease, color 0.3s ease; /* Transizione fluida */
 }
 
 strong:hover {
-    /* transform: scale(1.3);
-    color: #ffda44;  */
     transform: translateX(10px); /* Sposta il testo verso destra */
     color: #ffda44; /* Cambia il colore al passaggio del mouse */
 }
@@ -498,9 +487,9 @@ strong:hover {
 #map {
     width: 100%;
     height: 300px;
-    margin-top: 10px;
-    border: 0; /* Rimuove il bordo */
-    border-radius: 8px; /* Aggiunge angoli arrotondati */
+    margin-top: 20px;
+    border: 0;
+    border-radius: 8px; 
 }
 
 
@@ -703,6 +692,11 @@ footer .social a:hover {
         gap: 0;
     }
 
+    .profile-image-container {
+        max-height: 330px;
+    }
+
+
     .hero-pic {
         width: 200px;
         height: 200px;
@@ -774,27 +768,27 @@ footer .social a:hover {
     
     /* Nascondi i link della navbar di default */
     nav .navlinks {
-        display: none; /* Nasconde i link di navigazione inizialmente */
-        flex-direction: column; /* Dispone i link in colonna */
+        display: none; 
+        flex-direction: column; 
         position: absolute;
-        top: 100%; /* Mostra il menu sotto l'header */
+        top: 100%; 
         left: 0;
-        width: 100%; /* Il menu occupa tutta la larghezza */
-        background-color: #0056b3; /* Colore di sfondo */
+        width: 100%; 
+        background-color: #0056b3;
         z-index: 1000;
     }
     
     .menu-links{
         display: none;
         flex-direction: column;
-        position: fixed; /* Fissa il menu durante lo scroll */
-        top: 0; /* Allinealo alla parte superiore dello schermo */
+        position: fixed; 
+        top: 0;
         left: 0;
-        width: 100%; /* Occupa tutta la larghezza */
-        background-color: #0056b3;  /*Colore di sfondo */
-        z-index: 1000; /* Porta il menu sopra gli altri elementi */
-        padding: 20px; /* Aggiungi un po' di padding */
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Aggiungi un'ombra */
+        width: 100%; 
+        background-color: #0056b3;  
+        z-index: 1000; 
+        padding: 20px; 
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); 
         transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
 
@@ -840,7 +834,7 @@ footer .social a:hover {
     /* Stile per il bottone del menu */
     .menu-toggle {
         margin-right: 10px;
-        display: block; /* Mostra il bottone per il menu */
+        display: block; 
         background-color: #f8f9fa;
         color: #000;
         font-size: 20px;
@@ -850,22 +844,22 @@ footer .social a:hover {
     }
 
     .dark-mode .menu-toggle {
-        background-color: #343a40; /* Colore scuro per modalità notte */
-        color: #fff; /* Testo bianco */
+        background-color: #343a40; 
+        color: #fff; 
     }
     
     .menu-toggle:hover {
-        background-color: #e2e6ea; /* Colore più scuro in modalità normale */
+        background-color: #e2e6ea; 
     }
     
     .dark-mode .menu-toggle:hover {
-        background-color: #495057; /* Colore più chiaro in modalità notte */
+        background-color: #495057;
     }
 
     .close-container {
         display: flex;
-        justify-content: flex-end; /* Allinea la X a destra */
-        padding: 10px; /* Spaziatura attorno alla X */
+        justify-content: flex-end; 
+        padding: 10px; 
     }
     
     /* Stile per la "X" */
@@ -878,7 +872,7 @@ footer .social a:hover {
     }
     
     .chiudi:hover {
-        color: white; /* Cambia colore al passaggio del mouse */
+        color: white; 
     }
     /* Nasconde l'header su scorrimento */
     header {

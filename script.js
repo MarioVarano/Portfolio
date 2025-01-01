@@ -7,12 +7,12 @@ const chiudi = document.querySelector('.chiudi'); // Pulsante X per chiudere il 
 
 
 // Inizializza EmailJS per inviare il form
-emailjs.init("rpm03zeG7PHQISZ7-");  // Sostituisci con il tuo User ID di EmailJS
+emailjs.init("rpm03zeG7PHQISZ7-");  
 
 document.getElementById("contact-form").addEventListener("submit", function(event) {
   event.preventDefault();  // Impedisce il comportamento di default del form
 
-  emailjs.sendForm("service_k4kztle", "template_w09h3zy", this)  // Sostituisci con il tuo Service ID e Template ID
+  emailjs.sendForm("service_k4kztle", "template_w09h3zy", this)  
     .then(function(response) {
       alert("Messaggio inviato con successo!");  // Successo
       document.getElementById("contact-form").reset();  // Resetta il modulo
@@ -98,7 +98,6 @@ function updateNavbarStyle() {
 
 
 
-console.log(menuLinks.classList.contains("dark-scrolled")); // Dovrebbe stampare true se la classe è applicata
 
 
 
@@ -112,14 +111,14 @@ darkModeToggles.forEach((toggle) => {
 
 // Mostra il menu al clic sul bottone
 menuToggle.addEventListener('click', () => {
-    menuLinks.classList.add('active'); // Aggiunge la classe 'active'
-    header.classList.add('none'); // Aggiunge la classe '
+    menuLinks.classList.add('active'); 
+    header.classList.add('none'); 
 });
 
 // Nascondi il menu al clic sulla "X"
 chiudi.addEventListener('click', () => {
-    menuLinks.classList.remove('active'); // Rimuove la classe 'active'
-    header.classList.remove('none'); // Rimuove la classe 'none'
+    menuLinks.classList.remove('active'); 
+    header.classList.remove('none'); 
 });
 
 
