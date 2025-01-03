@@ -6,27 +6,36 @@ const chiudi = document.querySelector('.chiudi'); // Pulsante X per chiudere il 
 
 
 
+// Funzione: Mostra una notifica (messaggio personalizzato)
+function showNotification(message, type) {
+    const notification = document.createElement("div");
+    notification.className = `notification ${type}`; 
+    notification.innerText = message;
+    document.body.appendChild(notification);
+
+    // Rimuove la notifica dopo 3 secondi
+    setTimeout(() => notification.remove(), 3000);
+}
+
 // Inizializza EmailJS per inviare il form
-emailjs.init("rpm03zeG7PHQISZ7-");  
+emailjs.init("rpm03zeG7PHQISZ7-");
 
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-  event.preventDefault();  // Impedisce il comportamento di default del form
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Impedisce il comportamento di default del form
 
-  emailjs.sendForm("service_k4kztle", "template_w09h3zy", this)  
-    .then(function(response) {
-      alert("Messaggio inviato con successo!");  // Successo
-      document.getElementById("contact-form").reset();  // Resetta il modulo
-    }, function(error) {
-      alert("Errore: " + JSON.stringify(error));  // Mostra errore
-    });
+    emailjs
+        .sendForm("service_k4kztle", "template_w09h3zy", this)
+        .then(function (response) {
+            // Mostra una notifica di successo
+            showNotification("Messaggio inviato con successo!", "success");
+            document.getElementById("contact-form").reset(); // Resetta il modulo
+        })
+        .catch(function (error) {
+            // Mostra una notifica di errore
+            showNotification("Errore durante l'invio: " + JSON.stringify(error), "error");
+        });
 });
-window.addEventListener("scroll", function () {
-    if (window.scrollY > 50) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
-    }
-});
+
 
 
 window.addEventListener("scroll", function () {

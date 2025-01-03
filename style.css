@@ -612,7 +612,44 @@ footer .social a:hover {
     color: #ffdd57;
 }
 
-
+/* Stile base per tutte le notifiche */
+.notification {
+    position: fixed;
+    top: 20px; 
+    left: 50%; 
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 0.3s forwards; 
+  }
+  
+  /* Stile per notifiche di successo */
+  .notification.success {
+    background-color: #4caf50; 
+  }
+  
+  /* Stile per notifiche di errore */
+  .notification.error {
+    background-color: #f44336; 
+  }
+  
+  /* Animazione per rendere la notifica visibile */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
 
 /* Responsive */
 
