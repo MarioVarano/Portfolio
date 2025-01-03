@@ -223,6 +223,7 @@ h2{
 .about-left p {
     color: #ddd; /* Contrasto leggibile */
     text-align: center;
+    font-size: 1.2rem;
 
 }
 
@@ -282,6 +283,7 @@ h2{
 .section-header p {
     color: #ddd;
     text-align: center;
+    font-size: 1.2rem;
 }
 
 .project-container {
@@ -430,7 +432,7 @@ h2{
 }
 
 .hero-text p {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 strong {
@@ -485,7 +487,7 @@ strong:hover {
 }
 /* Stile per l'iframe della mappa */
 #map {
-    width: 100%;
+    width: 70%;
     height: 300px;
     margin-top: 20px;
     border: 0;
@@ -920,9 +922,6 @@ footer .social a:hover {
         font-size: 2rem;
     }
 
-    .hero-text p {
-        font-size: 0.9rem;
-    }
 
     /* Colonne nella sezione "about" */
     .about-left,
@@ -987,10 +986,6 @@ footer .social a:hover {
 
     .hero-text h1 {
         font-size: 1.8rem;
-    }
-
-    .hero-text p {
-        font-size: 0.8rem;
     }
 
    
